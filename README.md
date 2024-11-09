@@ -43,8 +43,9 @@ The application will be an overlaying window with a chat box. There's two functi
 
 ---
 ## TODO
-1. Adjustable screenshot interval
-2. Screenshot region selection (instead of full screen)
-3. Progress tracking over time
-4. Save/load/export conversation history
-5. Custom prompts for different types of exercises
+1. MAKE IT PRETTY (work never done)
+2. Adjustable screenshot interval
+3. Screenshot region selection (instead of full screen)
+4. Progress tracking over time
+5. Save/load/export conversation history
+6. Custom prompts for different types of exercises
