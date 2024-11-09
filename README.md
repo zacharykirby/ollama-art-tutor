@@ -24,8 +24,9 @@ Art is something everyone should pick up, so here's me trying to make it more ac
     - `pip install PyQt6 Pillow requests`
     - or use the requests file, will update as we expand
 4. Ollama ([found here](https://ollama.com))
-    - llama3.2-vision (11b / 90b)
-    - llava (7b / 13b / 34b)
+    - llama3.2-vision (11b / 90b) : Best overall performance
+    - llava (7b / 13b / 34b) : Decent Performance
+    - llava-phi3 (3.8b) : Budget Performance
 
 ---
 ## Usage
