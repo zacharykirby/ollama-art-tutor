@@ -106,9 +106,9 @@ class ArtTutorWindow(QMainWindow):
     def send_message(self):
         message = self.text_input.toPlainText()
         if message:
-            self.chat_display.append(f"You: {message}")
+            self.chat_display.append(f"You: {message}\n")
             response = self.ollama.query_model(message, self.last_screenshot)
-            self.chat_display.append(f"Tutor: {response}")
+            self.chat_display.append(f"Tutor: {response}\n")
             self.text_input.clear()
             
     def request_review(self):
@@ -121,7 +121,7 @@ class ArtTutorWindow(QMainWindow):
             Provide specific feedback and suggestions for improvement."""
             
             response = self.ollama.query_model(prompt, self.last_screenshot)
-            self.chat_display.append(f"Tutor Review: {response}")
+            self.chat_display.append(f"Tutor Review: {response}\n")
             
     def closeEvent(self, event):
         self.screenshot_worker.stop()
