@@ -70,8 +70,10 @@ class ChatWorker(QThread):
 
     def run(self):
         # use the OllamaInterface's query_model generator for streaming
+        self.chunk_received.emit('Assistant: ')
         for chunk in self.ollama.query_model(self.message, self.screenshot):
             self.chunk_received.emit(chunk)
+        self.chunk_received.emit('\n')
         self.finished.emit()
 
 class ArtTutorWindow(QMainWindow):
@@ -136,7 +138,7 @@ class ArtTutorWindow(QMainWindow):
             return
         
         # Display the user's message
-        self.chat_display.append(f"You: {message}\n")
+        self.chat_display.append(f"You: {message}\n\n")
         self.text_input.clear()
 
         # Start the background worker for streaming response
