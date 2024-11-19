@@ -33,7 +33,7 @@ class ScreenshotWorker(QThread):
 class OllamaInterface:
     def __init__(self):
         self.base_url = "http://localhost:11434/api/generate"
-        self.model = "minicpm-v"
+        self.model = "art-tutor"
 
     # simulate streaming by yielding chunks
     def query_model(self, prompt, image=None):
